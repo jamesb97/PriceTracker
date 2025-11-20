@@ -37,7 +37,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
       {/* Image Area */}
       <div className="relative h-48 bg-gray-50 overflow-hidden">
         <img
-          src={product.imageSeed}
+          src={product.image}
           alt={product.title}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />

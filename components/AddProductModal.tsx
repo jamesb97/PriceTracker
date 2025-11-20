@@ -30,14 +30,9 @@ export const AddProductModal: React.FC<AddProductModalProps> = ({
       try {
         const analyzedData = await analyzeProduct(query);
 
-        const imageSeed =
-          (analyzedData as any).imageSeed ??
-          Math.floor(Math.random() * 1000).toString();
-
         const newProduct: Product = {
           ...analyzedData,
           id: uuidv4(),
-          imageSeed,
           addedAt: Date.now(),
         };
 
