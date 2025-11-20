@@ -17,8 +17,7 @@ export interface Product {
   currentPrice: number;
   originalPrice: number; // MSRP or high point
   currency: string;
-  imageSeed: string;
-  //image: string;
+  image: string; // Product image URL
   description: string;
   history: PricePoint[];
   rating: number;
