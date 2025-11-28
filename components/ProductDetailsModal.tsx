@@ -66,7 +66,7 @@ export const ProductDetailsModal: React.FC<ProductDetailsModalProps> = ({
         <div className="w-full md:w-1/3 bg-gray-50 p-6 sm:p-8 flex flex-col gap-6">
           <div className="rounded-xl overflow-hidden shadow-md bg-white aspect-square">
             <img
-              src={product.imageSeed}
+              src={product.image}
               alt={product.title}
               className="w-full h-full object-cover"
             />
@@ -209,7 +209,7 @@ export const ProductDetailsModal: React.FC<ProductDetailsModalProps> = ({
           </div>
 
           <div className="mt-auto flex gap-4 pt-6 border-t border-gray-100">
-            <button className="flex-1 bg-gray-900 hover:bg-gray-800 text-white py-3 rounded-xl font-semibold transition-colors flex items-center justify-center gap-2">
+            <button className="flex-1 bg-gray-900 hover:bg-gray-800 text-white py-3 rounded-xl font-semibold transition-colors flex items-center justify-center gap-2" onClick={() => window.open(product.url, "_blank")}>
               <ExternalLink className="w-4 h-4" />
               View on Amazon
             </button>
