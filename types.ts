@@ -25,4 +25,5 @@ export interface Product {
   dealStatus: DealStatus;
   advice: string;
   addedAt: number;
+  url: string;
 }
