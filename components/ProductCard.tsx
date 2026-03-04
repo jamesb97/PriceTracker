@@ -48,6 +48,15 @@ export const ProductCard: React.FC<ProductCardProps> = ({
         >
           {product.dealStatus} Deal
         </div>
+        <div className="absolute top-10 left-3 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide border bg-gray-100 text-gray-700">
+          {product.category}
+        </div>
+        {/* No deal */}
+        {product.dealStatus === DealStatus.FAIR && (
+          <div className="absolute top-20 left-3 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide border bg-red-100 text-red-700">
+            No Deal
+          </div>
+        )}
       </div>
 
       {/* Content */}
