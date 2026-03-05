@@ -1,6 +1,6 @@
 import React from "react";
 import { Product, DealStatus } from "../types";
-import { TrendingDown, TrendingUp, Minus, Star } from "lucide-react";
+import { TrendingDown, TrendingUp, Minus, Star, Tag } from "lucide-react";
 
 interface ProductCardProps {
   product: Product;
@@ -21,6 +21,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({
         return "bg-yellow-100 text-yellow-700 border-yellow-200";
       case DealStatus.BAD:
         return "bg-red-100 text-red-700 border-red-200";
+      case DealStatus.NONE:
+        return "bg-gray-100 text-gray-700 border-gray-200";
     }
   };
 
@@ -52,8 +54,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           {product.category}
         </div>
         {/* No deal */}
-        {product.dealStatus === DealStatus.FAIR && (
-          <div className="absolute top-20 left-3 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide border bg-red-100 text-red-700">
+        {product.dealStatus === DealStatus.NONE && (
+          <div className="absolute top-20 left-3 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide border bg-gray-100 text-gray-700">
             No Deal
           </div>
         )}
