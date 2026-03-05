@@ -3,6 +3,7 @@ export enum DealStatus {
   GOOD = "Good",
   FAIR = "Fair",
   BAD = "Bad",
+  NONE = "None",
 }
 
 export interface PricePoint {
