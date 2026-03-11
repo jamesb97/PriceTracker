@@ -18,7 +18,7 @@ export const Header: React.FC<HeaderProps> = ({ onAddClick, onRefreshClick }) =>
             </div>
             <div className="flex flex-col">
               <span className="font-bold text-xl text-gray-900 leading-none">
-                Price Track
+                Price Tracker
               </span>
               <span className="text-xs text-indigo-600 font-medium tracking-wider">
                 AI POWERED
