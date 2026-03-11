@@ -151,6 +151,17 @@ export const ProductDetailsModal: React.FC<ProductDetailsModalProps> = ({
                     vertical={false}
                     stroke="#f3f4f6"
                   />
+                  <LineChart
+                  data={chartData}
+                   />
+                  <Line
+                  type="monotone"
+                  dataKey="price"
+                  stroke="#4f46e5"
+                  strokeWidth={2}
+                  dot={{ r: 4, fill: "#4f46e5" }}
+                  activeDot={{ r: 6 }}
+                   />
                   <XAxis
                     dataKey="date"
                     axisLine={false}
